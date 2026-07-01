@@ -2,7 +2,8 @@
 import { api, baseURL } from "@/lib/axios"
 import { useEffect, useState } from "react"
 import Image from "next/image"
-import { IBuku } from "../admin/buku/page"
+import { IBuku } from "../user/buku/page"
+import Link from "next/link"
 
 
 export default function UserDashboardPage () {
@@ -40,6 +41,9 @@ export default function UserDashboardPage () {
                                 <p className="card-text">{buku.genre.nama} | {buku.penerbit}</p>
                                 <p className="card-text">{buku.sinopsis}</p>
                                 <div className="d-flex gap-1">
+                                    <Link href="/user/buku">
+                                        <button className="btn btn-primary">Detail</button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
